@@ -1,7 +1,7 @@
 //bibliotecas/importações
 import './banner.css';
 
-function Banner () { // -> nome da função começando com letra maiúscula porque é um componente
+export const Banner = () => { // -> nome da função começando com letra maiúscula porque é um componente
     //JSX
     return (
         <header className="banner">
@@ -9,5 +9,3 @@ function Banner () { // -> nome da função começando com letra maiúscula porq
         </header>
     )
 }
-
-export default Banner//exportar function/componente banner
