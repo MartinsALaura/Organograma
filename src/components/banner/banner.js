@@ -5,7 +5,7 @@ export const Banner = () => { // -> nome da função começando com letra maiús
     //JSX
     return (
         <header className="banner">
-            <img src="/img/banner.png" alt="Banner principal da page do organograma"/>
+            <img src="../../img/banner.png" alt="Banner principal da page do organograma"/>
         </header>
     )
 }

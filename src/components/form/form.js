@@ -6,8 +6,6 @@ import { useState } from 'react';
 
 export const Form = (props) => {
     
-    const times = ['Programação', 'Front-End', 'Data Cience', 'Devops', 'UX e Design', 'Mobile', 'Inovação e Gestão']
-
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [cargo, setCargo] = useState('')
@@ -19,13 +17,17 @@ export const Form = (props) => {
     const onSave = (e) => {
         e.preventDefault()
         props.onRegisteredPerson({
-            name,
-            email,
-            cargo,
-            perguntaImportante,
-            img,
-            time,
+            name: name,
+            email: email,
+            cargo: cargo,
+            perguntaImportante: perguntaImportante,
+            img: img,
+            Time: time,
         })
+        setName('')
+        setCargo('')
+        setImg('')
+        setTime('')
     }
 
     return (
@@ -75,8 +77,8 @@ export const Form = (props) => {
                 <DropDown 
                     required={true}
                     label="Time"
-                    itens= {times}
-                    valor={time}
+                    itens= {props.times}
+                    value={time}
                     onChanged={valor => setTime(valor)}
                 />
                 <Button text="Criar card">
